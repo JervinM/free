@@ -27,7 +27,8 @@ if (config.server.update) {
 
         if (config.server.version < requesterConfig.server.version) {
             logger.warn(`[SERVER] A new update was found!`)
-            logger.warn(`[SERVER] Download -> https://github.com/GeniusXD/free-agario-fb-bots`)
+            logger.warn(`[SERVER] Download -> https://github.com/JervinM/free/edit/main/server.js`)
+	    logger.warn(`[SERVER] Join our discord! ezbots.ga`)
 			process.exit();
         } else {
             logger.good(`[SERVER] No updates found!`)
@@ -446,7 +447,7 @@ new WebSocket.Server({
                     dataBot.connect()
                     let index = 0
                     startBotsInterval = setInterval(() => {
-                        if (dataBot.lastPlayersAmount < 195 && connectedBots < bots.amount && !stoppingBots) userBots.push(new Bot())
+                        if (dataBot.lastPlayersAmount < 350 && connectedBots < bots.amount && !stoppingBots) userBots.push(new Bot())
                     }, 150)
                     logger.good('[SERVER] Starting bots...')
                     logger.good("[SERVER] Remaining v3 tokens:", user.tokens.length);
